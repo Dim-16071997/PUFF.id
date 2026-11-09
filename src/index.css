@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-neutral-950 text-neutral-100 antialiased selection:bg-cyan-500 selection:text-neutral-950;
+  }
+}
+
+/* Thermal 80mm Print Media Styles */
+@media print {
+  @page {
+    size: 80mm auto;
+    margin: 0;
+  }
+
+  html, body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    width: 80mm !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Hide app navigation and modal chrome during thermal receipt print */
+  body > *:not(#root) {
+    display: none !important;
+  }
+
+  #root * {
+    visibility: hidden;
+  }
+
+  #printable-thermal-receipt,
+  #printable-thermal-receipt * {
+    visibility: visible !important;
+  }
+
+  #printable-thermal-receipt {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 76mm !important;
+    max-width: 76mm !important;
+    padding: 3mm !important;
+    margin: 0 auto !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Puff.id - Mobile Car Wash POS",
+  "description": "Aplikasi kasir mobile car wash Puff.id dengan tagline 'We come, we clean, you shine', pemeriksaan kualitas air (pH & TDS), catatan kondisi kendaraan, dan cetak struk thermal 80mm.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
