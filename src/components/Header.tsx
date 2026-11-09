@@ -2,6 +2,7 @@ import React from 'react';
 import { Sparkles, Droplets } from 'lucide-react';
 import { formatRupiah } from '../utils/pos';
 import { PuffLogo } from './PuffLogo';
+import { PWAInstallButton } from './PWAInstallButton';
 
 interface HeaderProps {
   todayCount: number;
@@ -59,7 +60,7 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
       </div>
 
-      {/* Water quality badge banner */}
+      {/* Water quality badge banner & PWA Install */}
       <div className="mt-3.5 pt-3 border-t border-white/15 flex flex-wrap items-center justify-between gap-2 text-xs text-cyan-100">
         <div className="flex items-center gap-1.5">
           <Droplets className="h-3.5 w-3.5 text-cyan-200" />
@@ -68,9 +69,12 @@ export const Header: React.FC<HeaderProps> = ({
             Avg {averageTds} ppm · pH 7.0 Netral
           </span>
         </div>
-        <span className="text-[11px] text-cyan-100/80">
-          Reverse Osmosis & Demineralized Water Safe for Ceramic Coating
-        </span>
+        <div className="flex items-center gap-2">
+          <span className="hidden sm:inline text-[11px] text-cyan-100/80">
+            Air RO Demineralisasi
+          </span>
+          <PWAInstallButton />
+        </div>
       </div>
     </header>
   );
